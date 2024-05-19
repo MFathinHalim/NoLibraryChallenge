@@ -74,7 +74,7 @@ const requestListener: http.RequestListener = (
     req.on("end", async () => {
       const parsedBody: { id: string } = JSON.parse(body);
       try {
-        notes = notes.filter((obj) => obj.id != parsedBody.id); // Hapus Datanya /(T-T)\
+        notes = notes.filter((obj) => obj.id != parsedBody.id); //! Hapus Datanya /(T-T)\
         res.writeHead(200); //kasih code 200
         res.end("Note deleted successfully!"); // Kirim message
       } catch (error) {
